@@ -1,0 +1,139 @@
+
+@font-face{
+    font-family: 'Poppins-ExtraBold';
+    src: url('assets/fonts/Poppins-ExtraBold.ttf');
+}
+
+@font-face{
+    font-family: 'Poppins-Regular';
+    src: url('assets/fonts/Poppins-Regular.ttf');
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 94%);
+}
+.main-container{
+    text-align: center;    
+    border-radius: 10% 10% 20% 10%;
+    background-color: hsl(0, 0%, 100%);
+    padding: 2%;
+    text-align: left;
+    width: 50%;
+}
+
+
+input{
+    width: 15%;
+    font-size: 32px;
+    border-color: rgba(168, 168, 168, 0.192);
+    border-width: 1px;
+    border-radius: 5% ;
+    margin-right: 3%;
+    padding-right: 2%;
+}
+
+.input-title{
+    display: inline-block;
+    font-family: Poppins-Regular;
+    padding-right: 14%;
+    padding-bottom: 0.5%;
+}
+
+.container-contagem{
+    font-family: Poppins-ExtraBold;
+    font-weight: bold;
+    font-size: 70px;
+}
+
+span{
+    display: block;
+}
+
+.contagem-underline{
+    color: hsl(259, 100%, 65%);
+    display: inline;
+    margin-right: 1%;
+}
+
+img{
+    display: inline;
+}
+
+.main-container__content{
+    margin-left: 2.5% ;
+    margin-top: 3%;
+}
+
+.image-button {
+    background-color: #FFF;
+    width: 50px;
+    height: 50px;
+    background-size:contain;
+    border: none;
+    cursor: pointer;
+  }
+  
+label{
+    padding-top: 3%;
+    display: block;
+    font-family: Poppins-Regular;
+    font-size: 0.9em;
+    color: rgba(17, 17, 17, 0.603);
+}
+  
+
+@media screen and (max-width: 1024px) {
+    .main-container{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-container{
+        width: 80%;
+    }
+
+    .input-title{
+        padding-right: 10%;
+    }
+
+    input{
+        width: 10%;
+        font-size: 28px;
+    }
+
+    #input-ano{
+        width:16%;
+    }
+
+    .container-contagem{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-container{
+        width: 90%;
+    }
+
+    .input-title{
+        padding-right: 8%;
+    }
+
+    input{
+        width: 15%;
+        font-size: 20px;
+    }
+
+    .container-contagem{
+        font-size: 40px;
+    }
+}

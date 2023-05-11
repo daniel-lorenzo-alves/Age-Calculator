@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d351efe56e.js" crossorigin="anonymous"></script>
+
+    
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-container__content">
+            <span class="input-title">Day</span>
+            <span class="input-title" style="padding-right: 11%;">Month</span>
+            <span class="input-title">Year</span>
+            <form id="form">
+                <input placeholder="DD"  min="1" max="31" maxlength="2" id="input-dia" type="number">
+                <input placeholder="MM"  min="1" max="12" maxlength="2" id="input-mes" type="number">
+                <input placeholder="YYYY" min="1" max="2023" maxlength="4" id="input-ano" type="number">
+            </form>
+            <label for="form">Ex: 02/03/1999</label>
+            <br>
+            <hr style="border-color: #ffffff79; width: 65%; display: inline-block;">
+            <button onclick="calcularIdade()" class="image-button" style="background-image: url('assets/repolho-roxo.png');" id="botao"></button>
+
+            <div class="container-contagem">
+                <div class="container-contagem">
+                    
+                    <span><span class="contagem-underline" id="contagem-ano">- -</span>years</span>
+                    <span><span class="contagem-underline" id="contagem-mes">- -</span>months</span>
+                    <span><span class="contagem-underline" id="contagem-dia">- -</span>days</span>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
