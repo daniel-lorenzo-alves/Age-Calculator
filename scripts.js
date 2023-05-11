@@ -64,10 +64,10 @@ function calcularIdade() {
     contagemAno.textContent = anosVividos;
     contagemMes.textContent = mesesVividos;
     contagemDia.textContent = diasVividos;
-  }else{
+  }
+  else{
     contagemAno.textContent = anosVividos - 1;
     contagemMes.textContent = Math.abs(mesesVividos) ;
-    contagemDia.textContent = diasVividos;
-  }  
+    contagemDia.textContent = diasVividos; 
   }
-  
+}
