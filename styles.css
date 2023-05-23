@@ -9,8 +9,11 @@
     src: url('assets/fonts/Poppins-Regular.ttf');
 }
 
-
+*{
+    transition: background 1s;
+}
 body{
+    transition: background 1s;
     margin: 0;
     padding: 0;
     display: flex;
@@ -20,6 +23,33 @@ body{
     height: 100vh;
     background-color: hsl(0, 0%, 94%);
 }
+
+.dark-theme{
+    transition: background 1s;
+    background-color: #0f081c;
+    
+}
+
+.dark-theme .main-container{
+    transition: background 1s;
+    background-color: #6137ba;
+}
+
+
+.dark-theme hr{
+    transition: background 1s;
+    color: #b08bff;
+
+}
+
+.dark-theme .image-button{
+    background-color: #6137ba;
+}
+
+.dark-theme input{
+    background-color: #854cff;
+}
+
 .main-container{
     text-align: center;    
     border-radius: 10% 10% 20% 10%;
@@ -29,6 +59,24 @@ body{
     width: 50%;
 }
 
+#theme-toggle{
+    display:none;
+}
+
+#theme-toggle + label {
+    display: inline-block;
+    background-color: #ccc;
+    color: #f0f0f0;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    
+  }
+
+#theme-toggle:checked + label {
+    background-color: #222;
+    }
+      
 
 input{
     width: 15%;
@@ -38,6 +86,7 @@ input{
     border-radius: 5% ;
     margin-right: 3%;
     padding-right: 2%;
+    font-family: Poppins-Regular;
 }
 
 .input-title{

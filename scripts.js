@@ -6,12 +6,21 @@ inputDia.addEventListener("input", function(){
   if(this.value.length > this.maxLength){
     this.value = this.value.slice(0, this.maxLength);
   }
-  if(this.value > this.max){
-    this.value = 31 ;
+  if(inputMes.value === 1 || inputMes.value === 3 || inputMes.value === 5 || inputMes.value === 7 ||
+    inputMes.value === 8 || inputMes.value === 10 || inputMes.value === 12)
+    {
+      this.max = 31;
+    }
+  else if(inputMes.value === 2){
+    this.max = 28;
+  }
+  else{
+    this.max = 30;
   }
   if(this.value[1] < this.min && this.value[0] < this.min){
     this.value = 01;
   }
+
 });
 
 inputMes.addEventListener("input", function(){
@@ -35,6 +44,18 @@ inputAno.addEventListener("input", function(){
   }
 });
 
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeToggle.addEventListener('change', function() {
+  if (this.checked) {
+    body.classList.add('dark-theme');
+  } else {
+    body.classList.remove('dark-theme');
+  }
+});
+
+
 
 function calcularIdade() {
   const date = new Date();
@@ -55,19 +76,23 @@ function calcularIdade() {
   const contagemMes = document.getElementById("contagem-mes");
   const contagemDia = document.getElementById("contagem-dia");
 
-  if(mesesVividos ===  0 && diasVividos === 0){
-    contagemAno.textContent = anosVividos;
-    contagemMes.textContent = mesesVividos;
-    contagemDia.textContent = diasVividos;
-
-  } else if(mesesVividos === 0 && diasVividos > 0){
-    contagemAno.textContent = anosVividos;
-    contagemMes.textContent = mesesVividos;
-    contagemDia.textContent = diasVividos;
-  }
-  else{
-    contagemAno.textContent = anosVividos - 1;
-    contagemMes.textContent = Math.abs(mesesVividos) ;
-    contagemDia.textContent = diasVividos; 
+  if(anoDeNascimento === "" || diaDeNascimento === "" || mesDeNascimento === ""){
+    alert("Erro, não deixe campos em branco");
+  }else{
+    if(mesesVividos ===  0 && diasVividos === 0){
+      contagemAno.textContent = anosVividos;
+      contagemMes.textContent = mesesVividos;
+      contagemDia.textContent = diasVividos;
+  
+    } else if(mesesVividos === 0 && diasVividos > 0){
+      contagemAno.textContent = anosVividos;
+      contagemMes.textContent = mesesVividos;
+      contagemDia.textContent = diasVividos;
+    }
+    else{
+      contagemAno.textContent = anosVividos - 1;
+      contagemMes.textContent = Math.abs(mesesVividos) ;
+      contagemDia.textContent = diasVividos; 
+    } 
   }
 }
